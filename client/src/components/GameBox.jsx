@@ -12,7 +12,7 @@ var GameBox = React.createClass({
 	// - Bury Pile - The pile of face-down cards
 	getInitialState: function() {
 		return {
-			PlayerCards: cardData
+			playerCards: cardData
 		}
 	},
 
@@ -22,9 +22,10 @@ var GameBox = React.createClass({
 				Game Box Loaded
 				<SharedGameStateBox />
 				<PlayerBox
-					cardData={this.state.playerCards}
+					cardData={this.state.playerCards[0]}
 				/>
 				<PlayerBox
+					cardData={this.state.playerCards[1]}
 				/>
 			</div>
 		)

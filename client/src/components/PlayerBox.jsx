@@ -1,11 +1,15 @@
 var React = require('react');
+var PlayerHand = require('./PlayerHand.jsx');
 
 var PlayerBox = React.createClass({
 
 	render: function() {
 		return (
-			<div className="game-box">
-				Player Box Loaded
+			<div className="player-box">
+				PlayerBox
+				<PlayerHand
+					playerHand={this.props.cardData}
+				/>
 			</div>
 		)
 	}
