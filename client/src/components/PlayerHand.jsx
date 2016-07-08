@@ -5,7 +5,7 @@ var PlayerHand = React.createClass({
 	render: function() {
 		var playerHandDisplay = this.props.playerHand.map(function(card, index) {
 			return(
-				<div key={index}>
+				<div key={index} className="card">
 					<ul>
 						<li>{card.powerLevel}</li>
 						<li>{card.cardTitle}</li>

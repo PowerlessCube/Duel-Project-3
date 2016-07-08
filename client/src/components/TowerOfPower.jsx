@@ -4,13 +4,13 @@ var TowerOfPower = React.createClass({
 
 	render: function() {
 		return (
-			<div className="game-box">
+			<div className="tower-of-power">
 				TowerOfPower Loaded
 			</div>
 		)
 	}
 
 })
-
+	
 
 module.exports = TowerOfPower;

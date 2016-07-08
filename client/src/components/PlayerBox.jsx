@@ -6,7 +6,7 @@ var PlayerBox = React.createClass({
 	render: function() {
 		return (
 			<div className="player-box">
-				PlayerBox
+				<h4>PLAYER {this.props.cardData[0].player}</h4>
 				<PlayerHand
 					playerHand={this.props.cardData}
 				/>

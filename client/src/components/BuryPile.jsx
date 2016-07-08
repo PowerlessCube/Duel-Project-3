@@ -4,7 +4,7 @@ var BuryPile = React.createClass({
 
 	render: function() {
 		return (
-			<div className="game-box">
+			<div className="bury-pile">
 				BuryPile Loaded
 			</div>
 		)

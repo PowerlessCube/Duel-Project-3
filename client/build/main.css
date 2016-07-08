@@ -1,0 +1,56 @@
+/*FONTS*/
+/*font-family: 'Open Sans Condensed', sans-serif;*/
+/*font-family: 'Shojumaru', cursive;*/
+
+body {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/*MAIN ELEMENTS*/
+ul {
+	list-style: none;
+}
+
+.game-box, .player-box, .player-hand, .shared-game-state-box, .tower-of-power, .bury-pile, .card {
+	border: red solid;
+}
+
+/*GAME BOX*/
+.game-box {
+	margin: 2vh;
+}
+
+/*SHARED GAME STATE BOX*/
+.shared-game-state-box {
+	border: green solid;
+	margin: 5vh;
+}
+
+.tower-of-power, .bury-pile {
+	border: cyan solid;
+	margin: 2vh;
+}
+
+/*PLAYER BOX*/
+.player-box {
+	border: blue solid;
+	margin: 5vh;
+}
+
+.player-hand {
+	border: purple solid;
+}
+
+.card {
+	border: purple solid;
+	display: inline-block;
+	margin: 2vh;
+}
+
+.player-box h4 {
+	font-family: 'Shojumaru', cursive;
+}
+
+.player-hand {
+	margin: 2vh;
+}
