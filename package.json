@@ -1,4 +1,4 @@
-{
+npm{
   "name": "end_point",
   "version": "1.0.0",
   "main": "server.js",
@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "chai": "^3.5.0",
     "express": "^4.13.4",
     "mocha": "^2.5.3"
   },

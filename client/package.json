@@ -17,8 +17,6 @@
     "webpack": "^1.12.12"
   },
   "dependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^2.5.3",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
   },
