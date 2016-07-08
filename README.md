@@ -13,8 +13,10 @@ Duel is a 2-­4 player card game, where the object of the game is to be the last
 - Express
 - Webpack
 - React
+- babel-jest
+- babel-polyfill
 
 #NPM Packages Used (Dev Dependencies)
 - Babel
 - Mocha - JavaScript test library toolkit
-- Chai - JavaScript test library toolkit
+- Jest - JavaScript test library toolkit
