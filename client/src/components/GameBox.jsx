@@ -1,7 +1,8 @@
 var React = require('react');
 var PlayerBox = require('./PlayerBox.jsx');
 var SharedGameStateBox = require('./SharedGameStateBox.jsx');
-var cardData = require('../cardData.js');
+var CardData = require('../cardData.js');
+var GameState = require('../models/gameState.js');
 
 var GameBox = React.createClass({
 	// TODO: The following details will be in the state:
@@ -12,7 +13,8 @@ var GameBox = React.createClass({
 	// - Bury Pile - The pile of face-down cards
 	getInitialState: function() {
 		return {
-			playerCards: cardData
+			// players: GameState.addPlayer("Player 1"),
+			playerCards: CardData
 		}
 	},
 
@@ -22,10 +24,10 @@ var GameBox = React.createClass({
 				Game Box Loaded
 				<SharedGameStateBox />
 				<PlayerBox
-					cardData={this.state.playerCards[0]}
+					CardData={this.state.playerCards[0]}
 				/>
 				<PlayerBox
-					cardData={this.state.playerCards[1]}
+					CardData={this.state.playerCards[1]}
 				/>
 			</div>
 		)

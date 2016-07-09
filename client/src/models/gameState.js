@@ -1,12 +1,12 @@
-var gameState = function() {
+var GameState = function() {
 	this.players = [];
 	this.turnIndex= 0;
 };
 
-gameState.prototype = {
+GameState.prototype = {
 
-	addPlayer: function(player) {
-		this.players.push( player );
+	addPlayer: function( player ) {
+		return this.players.push( player );
 	},
 
 	nextPlayer: function() {
@@ -17,3 +17,5 @@ gameState.prototype = {
 	}
 
 };
+
+module.exports = GameState;
