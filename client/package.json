@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "webpack -w"
+    "start": "webpack -w",
+    "test": "mocha specs"
   },
   "keywords": [],
   "author": "",
