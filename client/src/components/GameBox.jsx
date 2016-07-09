@@ -16,7 +16,7 @@ var GameBox = React.createClass({
 		return {
 			playerCards: CardData,
 			players: GameState.addPlayers(CardData),
-			currentPlayer: GameState.nextPlayer()
+			currentPlayer: CardData[0]
 		}
 	},
 
