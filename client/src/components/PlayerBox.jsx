@@ -10,6 +10,7 @@ var PlayerBox = React.createClass({
 				<PlayerHand
 					playerHand={this.props.CardData}
 				/>
+				<input type="submit" value="Change player" onClick={this.changePlayer}/>
 			</div>
 		)
 	}

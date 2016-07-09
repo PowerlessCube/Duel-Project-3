@@ -37,7 +37,6 @@ var GameBox = React.createClass({
 				<PlayerBox
 					CardData={this.state.playerCards[1]}
 				/>
-			<input type="submit" value="Change player" onClick={this.changePlayer}/>
 			</div>
 		)
 	}
