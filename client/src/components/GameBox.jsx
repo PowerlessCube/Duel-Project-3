@@ -33,9 +33,11 @@ var GameBox = React.createClass({
 				<SharedGameStateBox />
 				<PlayerBox
 					CardData={this.state.playerCards[0]}
+					changePlayer={this.changePlayer}
 				/>
 				<PlayerBox
 					CardData={this.state.playerCards[1]}
+					changePlayer={this.changePlayer}
 				/>
 			</div>
 		)

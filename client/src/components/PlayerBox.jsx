@@ -2,6 +2,10 @@ var React = require('react');
 var PlayerHand = require('./PlayerHand.jsx');
 
 var PlayerBox = React.createClass({
+	changePlayer: function(e) {
+		console.log("clicky, clicky");
+		this.props.changePlayer
+	},
 
 	render: function() {
 		return (
