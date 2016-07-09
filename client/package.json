@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack -w",
-		"test": "mocha src/components/specs"
+    "test": "mocha src/components/models/test"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "webpack": "^1.12.12"
   },
   "dependencies": {
+    "lodash": "^4.13.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
   },
