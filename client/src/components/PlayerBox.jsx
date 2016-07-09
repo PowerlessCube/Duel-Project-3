@@ -2,9 +2,9 @@ var React = require('react');
 var PlayerHand = require('./PlayerHand.jsx');
 
 var PlayerBox = React.createClass({
-	changePlayer: function(e) {
-		console.log("clicky, clicky");
-		this.props.changePlayer
+	nextPlayer: function(e) {
+		this.props.changePlayer();
+		
 	},
 
 	render: function() {
@@ -14,7 +14,11 @@ var PlayerBox = React.createClass({
 				<PlayerHand
 					playerHand={this.props.CardData}
 				/>
-				<input type="submit" value="Change player" onClick={this.changePlayer}/>
+			<input
+				type="submit"
+				value="Change player"
+				onClick={this.nextPlayer}
+			/>
 			</div>
 		)
 	}
