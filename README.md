@@ -10,13 +10,12 @@ Duel is a 2-­4 player card game, where the object of the game is to be the last
 ```
 
 #NPM Packages Used
-- Express
-- Webpack
-- React
-- babel-jest
-- babel-polyfill
+- Express - 
+- Webpack - bundler
+- Babel - compiler
+- React - JavaScript framework.
+- classNames - Package for managing classes in React.
 
 #NPM Packages Used (Dev Dependencies)
-- Babel
-- Mocha - JavaScript test library toolkit
-- Jest - JavaScript test library toolkit
+- Mocha - JavaScript test toolkit
+- chai - JavaScript testing library.
