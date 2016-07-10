@@ -30,14 +30,14 @@ var GameBox = React.createClass({
 		console.log('who is currentPlayer? ', this.state.currentPlayer);
 		console.log('what is nextPlayer? ', nextPlayer);
 	},
-// HACK: className does not pass down dynamically enough. Will need to be changed if increasing to 3 - 4 player game.
+
 	render: function() {
 		return (
 			<div className="game-box">
 				Game Box Loaded
 				<SharedGameStateBox />
 				<PlayerBox
-					className={`player-${this.state.currentPlayer[0].player}`}
+					className={this.state.currentPlayer[0].player}
 					CardData={this.state.currentPlayer}
 					changePlayer={this.changePlayer}
 				/>

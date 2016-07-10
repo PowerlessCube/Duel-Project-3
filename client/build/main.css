@@ -11,7 +11,7 @@ ul {
 	list-style: none;
 }
 
-.game-box, .player-1, .player-2, .player-hand, .shared-game-state-box, .tower-of-power, .bury-pile, .card {
+.game-box {
 	border: red solid;
 }
 
@@ -32,9 +32,16 @@ ul {
 }
 
 /*PLAYER BOX*/
-.player-1, .player-2 {
-	border: blue solid;
+.player-box {
 	margin: 5vh;
+}
+
+.player-1 {
+	border: #F04570 solid;
+}
+
+.player-2 {
+	border: #A58EBF solid;
 }
 
 .player-hand {
@@ -49,6 +56,8 @@ ul {
 
 .player-box h4 {
 	font-family: 'Shojumaru', cursive;
+	display: inline-block;
+	margin-left: 5vh;
 }
 
 .player-hand {

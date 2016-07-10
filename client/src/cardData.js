@@ -45,6 +45,13 @@ module.exports = [
 			cardImage: "Image link",
 			cardTitle: "Precision Strike",
 			CardAbilityText: "Put a face-up card into your hand."
+		},
+		{
+			player: 2,
+			powerLevel: 3,
+			cardImage: "Image link",
+			cardTitle: "Feint",
+			CardAbilityText: "Play a random card from your target's hand. Ignore the ability"
 		}
 	]
 ];
