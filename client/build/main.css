@@ -11,7 +11,7 @@ ul {
 	list-style: none;
 }
 
-.game-box, .player-box, .player-hand, .shared-game-state-box, .tower-of-power, .bury-pile, .card {
+.game-box, .player-1, .player-2, .player-hand, .shared-game-state-box, .tower-of-power, .bury-pile, .card {
 	border: red solid;
 }
 
@@ -32,7 +32,7 @@ ul {
 }
 
 /*PLAYER BOX*/
-.player-box {
+.player-1, .player-2 {
 	border: blue solid;
 	margin: 5vh;
 }

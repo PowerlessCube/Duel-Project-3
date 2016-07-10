@@ -1,4 +1,8 @@
+//NPM Packages
 var React = require('react');
+var classNames = require('classnames');
+
+//React/Java Objects
 var PlayerBox = require('./PlayerBox.jsx');
 var SharedGameStateBox = require('./SharedGameStateBox.jsx');
 var CardData = require('../cardData.js');
@@ -32,10 +36,12 @@ var GameBox = React.createClass({
 				Game Box Loaded
 				<SharedGameStateBox />
 				<PlayerBox
+					className={`player-${this.state.playerCards[0][0].player}`}
 					CardData={this.state.playerCards[0]}
 					changePlayer={this.changePlayer}
 				/>
 				<PlayerBox
+					className={`player-${this.state.playerCards[1][0].player}`}
 					CardData={this.state.playerCards[1]}
 					changePlayer={this.changePlayer}
 				/>
