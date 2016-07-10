@@ -7,19 +7,19 @@ module.exports = [
 			[
 				{
 					powerLevel: 0,
-					cardImage: "Image link",
+					cardImage: "../build/image/redcards/killing-blow-red.png",
 					cardTitle: "Killing Blow",
 					CardAbilityText: "Bury a face up card. Cannot play after trump."
 				},
 				{
 					powerLevel: 1,
-					cardImage: "Image link",
+					cardImage: "../build/image/redcards/red-1.png",
 					cardTitle: "Hidden Strength",
 					CardAbilityText: "Draw a random buried card."
 				},
 				{
 					powerLevel: 2,
-					cardImage: "Image link",
+					cardImage: "../build/image/redcards/red-2.png",
 					cardTitle: "Precision Strike",
 					CardAbilityText: "Put a face-up card into your hand."
 				}
