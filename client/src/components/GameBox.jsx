@@ -35,7 +35,7 @@ var GameBox = React.createClass({
 
 		return (
 			<div className="game-box">
-				Game Box Loaded
+				Game Box
 				<SharedGameStateBox />
 				<PlayerBox
 					className={this.state.currentPlayer[0].player}

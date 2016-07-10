@@ -48,12 +48,6 @@ ul {
 	border: purple solid;
 }
 
-.card {
-	border: purple solid;
-	display: inline-block;
-	margin: 2vh;
-}
-
 .player-box h4 {
 	font-family: 'Shojumaru', cursive;
 	display: inline-block;
@@ -62,4 +56,18 @@ ul {
 
 .player-hand {
 	margin: 2vh;
+}
+
+/*PLAYER CARDS*/
+.card {
+	border: purple solid;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 1vh;
+}
+
+.card img {
+	border-radius: 10px;
+	width: 15vh;
+	height: auto;
 }
