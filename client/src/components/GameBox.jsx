@@ -32,6 +32,7 @@ var GameBox = React.createClass({
 	},
 
 	render: function() {
+
 		return (
 			<div className="game-box">
 				Game Box Loaded

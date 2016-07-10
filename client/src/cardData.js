@@ -3,55 +3,54 @@ module.exports = [
 	[
 		{
 			player: 1,
-			powerLevel: 0,
-			cardImage: "Image link",
-			cardTitle: "Killing Blow",
-			CardAbilityText: "Bury a face up card. Cannot play after trump."
-		},
-		{
-			player: 1,
-			powerLevel: 1,
-			cardImage: "Image link",
-			cardTitle: "Hidden Strength",
-			CardAbilityText: "Draw a random buried card."
-		},
-		{
-			player: 1,
-			powerLevel: 2,
-			cardImage: "Image link",
-			cardTitle: "Precision Strike",
-			CardAbilityText: "Put a face-up card into your hand."
+			cards:
+			[
+				{
+					powerLevel: 0,
+					cardImage: "Image link",
+					cardTitle: "Killing Blow",
+					CardAbilityText: "Bury a face up card. Cannot play after trump."
+				},
+				{
+					powerLevel: 1,
+					cardImage: "Image link",
+					cardTitle: "Hidden Strength",
+					CardAbilityText: "Draw a random buried card."
+				},
+				{
+					powerLevel: 2,
+					cardImage: "Image link",
+					cardTitle: "Precision Strike",
+					CardAbilityText: "Put a face-up card into your hand."
+				}
+			]
 		}
 	],
 	//Player 2 - Cards
 	[
 		{
 			player: 2,
-			powerLevel: 0,
-			cardImage: "Image link",
-			cardTitle: "Killing Blow",
-			CardAbilityText: "Bury a face up card. Cannot play after trump"
-		},
-		{
-			player: 2,
-			powerLevel: 1,
-			cardImage: "Image link",
-			cardTitle: "Hidden Strength",
-			CardAbilityText: "Draw a random buried card."
-		},
-		{
-			player: 2,
-			powerLevel: 2,
-			cardImage: "Image link",
-			cardTitle: "Precision Strike",
-			CardAbilityText: "Put a face-up card into your hand."
-		},
-		{
-			player: 2,
-			powerLevel: 3,
-			cardImage: "Image link",
-			cardTitle: "Feint",
-			CardAbilityText: "Play a random card from your target's hand. Ignore the ability"
+			cards:
+			[
+				{
+					powerLevel: 0,
+					cardImage: "Image link",
+					cardTitle: "Killing Blow",
+					CardAbilityText: "Bury a face up card. Cannot play after trump."
+				},
+				{
+					powerLevel: 1,
+					cardImage: "Image link",
+					cardTitle: "Hidden Strength",
+					CardAbilityText: "Draw a random buried card."
+				},
+				{
+					powerLevel: 2,
+					cardImage: "Image link",
+					cardTitle: "Precision Strike",
+					CardAbilityText: "Put a face-up card into your hand."
+				}
+			]
 		}
-	]
+	],
 ];

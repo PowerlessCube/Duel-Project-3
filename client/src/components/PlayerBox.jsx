@@ -16,10 +16,10 @@ var PlayerBox = React.createClass({
 		return (
 			<div className={playerBoxClassNames}>
 				Player Box <br />
-				<h4>PLAYER {this.props.CardData[0].player}</h4>
-				<h4>CARDS: {this.props.CardData.length}</h4>
+			<h4>PLAYER {this.props.CardData[0].player}</h4>
+				<h4>CARDS: {this.props.CardData[0].cards.length}</h4>
 				<PlayerHand
-					playerHand={this.props.CardData}
+					playerHand={this.props.CardData[0].cards}
 				/>
 			<input
 				type="submit"
