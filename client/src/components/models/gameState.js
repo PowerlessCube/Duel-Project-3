@@ -20,7 +20,6 @@ GameState.prototype = {
 	// HACK: This function may cause trouble later on when alterning state in React. Also limits game to 2 player, will require modification if stretch goal of more players introduced.
 	nextPlayer: function() {
 		this.players = this.players.reverse();
-		console.log(this.players[0]);
 		return this.players[0];
 	}
 
