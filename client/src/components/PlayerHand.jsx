@@ -4,13 +4,10 @@ var PlayerHand = React.createClass({
 
 	render: function() {
 		var playerHandDisplay = this.props.playerHand.map(function(card, index) {
+			console.log(card.cardImage);
 			return(
 				<div key={index} className="card">
-					<ul>
-						<li>{card.powerLevel}</li>
-						<li>{card.cardTitle}</li>
-						<li>{card.cardImage}</li>
-					</ul>
+					<img src={card.cardImage} />
 				</div>
 			)
 		}.bind(this))
