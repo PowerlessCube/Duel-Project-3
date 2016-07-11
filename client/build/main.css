@@ -60,7 +60,6 @@ ul {
 
 /*PLAYER CARDS*/
 .card {
-	border: purple solid;
 	border-radius: 10px;
 	display: inline-block;
 	margin: 1vh;

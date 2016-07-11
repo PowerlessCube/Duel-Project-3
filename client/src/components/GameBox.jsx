@@ -27,8 +27,6 @@ var GameBox = React.createClass({
 	changePlayer: function(e) {
 		let nextPlayer = GameState.nextPlayer();
 		this.setState({currentPlayer: nextPlayer})
-		console.log('who is currentPlayer? ', this.state.currentPlayer);
-		console.log('what is nextPlayer? ', nextPlayer);
 	},
 
 	render: function() {

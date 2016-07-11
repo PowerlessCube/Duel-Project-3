@@ -1,12 +1,14 @@
+//NPM PACKAGES REQUIRED
 var React = require('react');
+var className = require('classnames');
 
 var PlayerHand = React.createClass({
 
 	render: function() {
-		var playerHandDisplay = this.props.playerHand.map(function(card, index) {
-			console.log(card.cardImage);
+		let playerHandClassNames = className('card', `player-${this.props.playerHand.player}`);
+		var playerHandDisplay = this.props.playerHand.cards.map(function(card, index) {
 			return(
-				<div key={index} className="card">
+				<div key={index} className={playerHandClassNames}>
 					<img src={card.cardImage} />
 				</div>
 			)

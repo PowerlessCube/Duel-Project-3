@@ -19,7 +19,7 @@ var PlayerBox = React.createClass({
 			<h4>PLAYER {this.props.CardData[0].player}</h4>
 				<h4>CARDS: {this.props.CardData[0].cards.length}</h4>
 				<PlayerHand
-					playerHand={this.props.CardData[0].cards}
+					playerHand={this.props.CardData[0]}
 				/>
 			<input
 				type="submit"
