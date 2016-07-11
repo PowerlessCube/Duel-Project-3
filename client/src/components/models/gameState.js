@@ -27,6 +27,7 @@ GameState.prototype = {
 		return this.players[0];
 	},
 
+	//MOVING CARDS FROM ARRAYS
 	findCard: function(deck, findCard) {
 		for (var card of deck) {
 			if (card === findCard) {
@@ -35,14 +36,22 @@ GameState.prototype = {
 		}
 	},
 
-	// playCard: function(player, card) {
-	// 	// TODO: I want to pick a matching card from the player's hand.
-	// 	// TODO: I want to remove that matching card from the player's hand
-	// 	// TODO: I want to insert that card into the first position of the tower of power array.
-	// }
+	removeCard: function(deck, card) {
+		var index = deck.indexOf(card);
+		return deck.splice(index, 1)[0];
+		// TODO: I want to remove that matching card from the player's hand
+	}
 
-
-
+	// 	addCard(deck, card) {
+	// 			// TODO: I want to insert that card into the first position of the tower of power array.
+	// 	},
+	//
+	// 	moveCard: function(fromDeck, card, targetDeck) {
+	// 		var targetCard = findCard(fromDeck, card);
+	// 		removeCard(fromDeck, targetCard);
+	// 		addCard(targetCard, targetDeck);
+	// 	}
+	//
 };
 
 module.exports = GameState;

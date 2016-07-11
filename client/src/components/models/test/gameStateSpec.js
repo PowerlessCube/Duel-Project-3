@@ -83,9 +83,14 @@ describe('Tower Of Power Game Logic', function() {
 		assert.equal(player1Cards[1], game.findCard(player1Cards, targetCard));
 	});
 
-	it('ToP Prt1: on play ToP should have 1 card', function() {
-		game.moveCard(fromDeck, card, targetDeck);
-		assert.equal(1, game.towerOfPower.length );
+	it('removeCard Part 1: returns target card', function() {
+		assert.deepEqual(targetCard,
+	 	game.removeCard(player1Cards, targetCard));
 	});
+
+	// it('ToP Prt1: on play ToP should have 1 card', function() {
+	// 	game.moveCard(player1Cards, targetCard, this.game.towerOfPower);
+	// 	assert.equal(1, game.towerOfPower.length );
+	// });
 
 });
