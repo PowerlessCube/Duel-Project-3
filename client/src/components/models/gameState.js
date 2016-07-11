@@ -1,10 +1,7 @@
 var _ = require('lodash');
 
-
 var GameState = function() {
 	this.players = [];
-	this.towerOfPower = [];
-	this.buryPile = [];
 	this.turnIndex= 0;
 };
 

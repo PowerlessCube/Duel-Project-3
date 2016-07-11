@@ -10,22 +10,6 @@ describe('Game State Logic', function() {
   });
 
 	//GETTER SETTER TESTS
-  it('it should have an empty array of players', function() {
-    assert.deepEqual([], game.players);
-  });
-
-	it('Tower of Power should be an empty array', function() {
-		assert.deepEqual([], game.towerOfPower);
-	});
-
-	it('Tower of Power should be an empty array', function() {
-		assert.deepEqual([], game.towerOfPower);
-	});
-
-	it('Bury Pile should be an empty array', function() {
-		assert.deepEqual([], game.buryPile);
-	});
-
 	it('Should have a turnIndex = to 0', function() {
 		assert.equal(0, game.turnIndex);
 	});

@@ -1,6 +1,7 @@
 var GameState = require('../gameState.js');
 var CardMovement = require('../cardMovement.js');
-var cardData = require('../cardData.js');
+var GameRules = require('../gameRules.js');
+var CardData = require('../cardData.js');
 
 var assert = require('chai').assert;
 
@@ -8,8 +9,9 @@ describe('Card Movement Logic', function() {
 
 	beforeEach(function() {
 		game = new GameState();
+		gameRules = new GameRules();
 		cardMovement = new CardMovement();
-		game.addPlayers(cardData);
+		game.addPlayers(CardData);
 		player1 = game.players[0][0];
 		player1Cards = player1.cards;
 		targetCard = player1Cards[1];
@@ -31,13 +33,13 @@ describe('Card Movement Logic', function() {
 	});
 
 	it('addCard: adds card to chosen deck', function() {
-		cardMovement.addCard(game.towerOfPower, targetCard);
-		assert.deepEqual([targetCard], game.towerOfPower);
+		cardMovement.addCard(gameRules.towerOfPower, targetCard);
+		assert.deepEqual([targetCard], gameRules.towerOfPower);
 	});
 
 	it('ToP: on play ToP should have 1 card', function() {
-		cardMovement.moveCard(player1Cards, targetCard, game.towerOfPower);
-		assert.equal(1, game.towerOfPower.length );
+		cardMovement.moveCard(player1Cards, targetCard, gameRules.towerOfPower);
+		assert.equal(1, gameRules.towerOfPower.length );
 	});
 
 });
@@ -46,7 +48,7 @@ describe('Randomised Selection Functions', function() {
 
 	beforeEach( function() {
 		game = new GameState();
-		game.addPlayers(cardData);
+		game.addPlayers(CardData);
 		player2 = game.players[1][0];
 		player2Cards = player2.cards;
 	});
