@@ -5,7 +5,7 @@ var classNames = require('classnames');
 //React/Java Objects
 var PlayerBox = require('./PlayerBox.jsx');
 var SharedGameStateBox = require('./SharedGameStateBox.jsx');
-var CardData = require('../cardData.js');
+var CardData = require('./models/cardData.js');
 var GameState = require('./models/gameState.js');
 
 var GameState = new GameState();
