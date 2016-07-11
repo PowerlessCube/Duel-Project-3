@@ -1,7 +1,7 @@
 var GameState = require('../gameState.js');
-var assert = require('chai').assert;
-
 var cardData = require('../cardData.js');
+
+var assert = require('chai').assert;
 
 describe('Game State Logic', function() {
 
@@ -66,31 +66,5 @@ describe('Game State Logic - 2 player game:', function() {
 		game.nextPlayer();
 		assert.equal(game.nextPlayer(), game.players[0]);
 	});
-
-});
-
-describe('Tower Of Power Game Logic', function() {
-
-	beforeEach(function() {
-		game = new GameState();
-		game.addPlayers(cardData);
-		player1 = game.players[0][0];
-		player1Cards = player1.cards;
-		targetCard = player1Cards[1];
-	});
-
-	it('findCard: return matching card', function() {
-		assert.equal(player1Cards[1], game.findCard(player1Cards, targetCard));
-	});
-
-	it('removeCard Part 1: returns target card', function() {
-		assert.deepEqual(targetCard,
-	 	game.removeCard(player1Cards, targetCard));
-	});
-
-	// it('ToP Prt1: on play ToP should have 1 card', function() {
-	// 	game.moveCard(player1Cards, targetCard, this.game.towerOfPower);
-	// 	assert.equal(1, game.towerOfPower.length );
-	// });
 
 });
