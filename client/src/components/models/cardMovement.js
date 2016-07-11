@@ -1,10 +1,5 @@
 //MOVING CARDS FROM ARRAYS
-var _ = require('lodash');
-
-var CardMovement = function() {
-};
-
-CardMovement.prototype = {
+module.exports = {
 
 	findCard: function(deck, findCard) {
 		for (var card of deck) {
@@ -34,5 +29,3 @@ CardMovement.prototype = {
 		return deck[Math.floor(Math.random() * deck.length)];
 	}
 };
-
-module.exports = CardMovement;

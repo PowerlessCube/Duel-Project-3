@@ -18,7 +18,7 @@ GameState.prototype = {
 	},
 
 	//TURN LOGIC
-	// HACK: This function may cause trouble later on when alterning state in React. Also limits game to 2 player, will require modification if stretch goal of more players introduced.
+	// HACK: This function may cause trouble later on when alterning state in React. Also limits game to 2 player, will require modification if stretch goal of more players introduced.  Lodash rotate.
 	nextPlayer: function() {
 		this.players = this.players.reverse();
 		return this.players[0];

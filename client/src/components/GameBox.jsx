@@ -7,20 +7,19 @@ var PlayerBox = require('./PlayerBox.jsx');
 var SharedGameStateBox = require('./SharedGameStateBox.jsx');
 var CardData = require('./models/cardData.js');
 var GameState = require('./models/gameState.js');
-
+var CardMovement = require('./models/cardMovement.js');
 var GameState = new GameState();
+var cardMovement = CardMovement
+
 var GameBox = React.createClass({
-	// TODO: The following details will be in the state:
-	// Player box
-	// - keeping a track of the players hand of cards
-	// GameStateBox
-	// - Tower of Power - The pile of face-up played cards
-	// - Bury Pile - The pile of face-down cards
+
 	getInitialState: function() {
 		return {
 			playerCards: CardData,
 			players: GameState.addPlayers(CardData),
-			currentPlayer: CardData[0]
+			currentPlayer: CardData[0],
+			towerOfPower: [],
+			buryPile: []
 		}
 	},
 
@@ -34,7 +33,10 @@ var GameBox = React.createClass({
 		return (
 			<div className="game-box">
 				Game Box
-				<SharedGameStateBox />
+				<SharedGameStateBox
+					towerOfPower={this.state.towerOfPower}
+					buryPile={this.state.buryPile}
+				/>
 				<PlayerBox
 					className={this.state.currentPlayer[0].player}
 					CardData={this.state.currentPlayer}
