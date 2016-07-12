@@ -22,7 +22,15 @@ var PlayerBox = React.createClass({
 					playCard={this.props.playCard}
 					changePlayer={this.props.changePlayer}
 				/>
-			<input type="button" value="Change player" onClick={this.nextPlayer}/>
+			<input
+				type="button"
+				value="Change player"
+				onClick={this.nextPlayer}
+			/>
+			<input
+				type="button"
+				value="Temp Card Power Check"
+			/>
 			</div>
 		)
 	}

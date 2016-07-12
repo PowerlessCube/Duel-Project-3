@@ -29,21 +29,35 @@ var GameBox = React.createClass({
 		}
 	},
 
-	cardPowerCheck: function() {
-		console.log("towerOfPowerPowerCheck");
-	},
-
 	currentPlayer: function() {
 		return this.state.playerCards[ this.state.currentPlayer ]
 	},
 
 	playCard: function(card) {
-		let playerToUpdate = this.currentPlayer();
-		playerToUpdate.cards = CardMovement.removeCard( playerToUpdate.cards, card )
-		let newPlayerCards = this.state.playerCards
-		newPlayerCards[this.state.currentPlayer] = playerToUpdate
-		var newTowerOfPower = this.state.towerOfPower.concat( [ card ] )
-		this.setState( { playerCards: newPlayerCards, towerOfPower: newTowerOfPower } )
+		let towerOfPower = this.state.towerOfPower
+		if (towerOfPower.length == 0) {
+			console.log("adds first card to tower")
+			let playerToUpdate = this.currentPlayer();
+			playerToUpdate.cards = CardMovement.removeCard( playerToUpdate.cards, card )
+			let newPlayerCards = this.state.playerCards
+			newPlayerCards[this.state.currentPlayer] = playerToUpdate
+			var newTowerOfPower = this.state.towerOfPower.concat( [ card ] )
+			this.setState( { playerCards: newPlayerCards, towerOfPower: newTowerOfPower } )
+		}
+		else {
+			console.log("adds second card or more to tower")
+			if (card.powerLevel < towerOfPower[towerOfPower.length-1].powerLevel) {
+				let playerToUpdate = this.currentPlayer();
+				playerToUpdate.cards = CardMovement.removeCard( playerToUpdate.cards, card )
+				let newPlayerCards = this.state.playerCards
+				newPlayerCards[this.state.currentPlayer] = playerToUpdate
+				var newTowerOfPower = this.state.towerOfPower.concat( [ card ] )
+				this.setState( { playerCards: newPlayerCards, towerOfPower: newTowerOfPower } )
+			} else {
+				console.log("You can't play that card");
+			}
+		}
+
 	},
 
 	gameStartBuryCard: function() {
