@@ -8,7 +8,7 @@ var SharedGameStateBox = require('./SharedGameStateBox.jsx');
 var CardData = require('./models/cardData.js');
 var GameState = require('./models/gameState.js');
 var CardMovement = require('./models/cardMovement.js');
-var GameState = new GameState();
+// var GameState = new GameState();
 
 var GameBox = React.createClass({
 
@@ -43,18 +43,17 @@ var GameBox = React.createClass({
 	},
 
 	gameStartBuryCard: function() {
-		console.log("gameStartBuryCard Function:");
 		let removedCards = []
 		this.state.playerCards.forEach(function(player) {
 			let randomCard = CardMovement.randomCard(player.cards)
 			removedCards.push( randomCard )
 			return player.cards = CardMovement.removeCard(player.cards, randomCard)
 		})
-		// console.log("mappedPlayers: ", mappedPlayers);
-		console.log("removedCards", removedCards);
-		console.log("buryPile: ", this.state.buryPile);
 		let newBuryPile = this.state.buryPile.concat( removedCards )
-		this.setState({ playerCards: this.state.playerCards, buryPile: newBuryPile })
+		this.setState({
+			playerCards: this.state.playerCards,
+			buryPile: newBuryPile
+		})
 	},
 
 	render: function() {
