@@ -7,7 +7,6 @@ var PlayerBox = require('./PlayerBox.jsx');
 var SharedGameStateBox = require('./SharedGameStateBox.jsx');
 var CardData = require('./models/cardData.js');
 var CardMovement = require('./models/cardMovement.js');
-// var GameState = new GameState();
 
 var GameBox = React.createClass({
 
@@ -31,8 +30,47 @@ var GameBox = React.createClass({
 	currentPlayer: function() {
 		return this.state.playerCards[ this.state.currentPlayer ]
 	},
+	//Card Abilities:
+	dodge: function() {
+		console.log("dodge function:");
+	},
+
+	backStab: function() {
+		console.log("backStab");
+	},
+
+	disarm: function() {
+		console.log("disarm function:");
+	},
+
+	changeStance: function() {
+		console.log("change stance function:");
+	},
+
+	copyCat: function() {
+		console.log("copycat function:");
+	},
+
+	feint: function() {
+		console.log("copycat function:");
+	},
+
+	precisionStrike: function() {
+		console.log("precision strike:");
+	},
+
+	hiddenStrength: function() {
+		console.log("hidden strength:");
+	},
+
+	killingBlow: function() {
+		console.log("killing blow");
+	},
 
 	playCard: function(card) {
+		console.log("card: ", card);
+		// let cardAbility = JSON.parse(card.cardAbility);
+		// console.log("what is cardAbility: ", cardAbility);
 		let playerToUpdate = this.currentPlayer();
 		playerToUpdate.cards = CardMovement.removeCard( playerToUpdate.cards, card )
 		let newPlayerCards = this.state.playerCards
@@ -43,12 +81,12 @@ var GameBox = React.createClass({
 
 	playCardTowerOfPower: function(card) {
 		let towerOfPower = this.state.towerOfPower
-		if (towerOfPower.length == 0) {
-			console.log("adds first card to tower")
+		if (towerOfPower.length == 0 || card.powerLevel === 8 ) {
+			//Allows first card to be played to an empty towerOfPower
 			this.playCard(card);
 		}
 		else {
-			console.log("adds second card or more to tower")
+			//Adds card to ToP after a card has already been played
 			if (card.powerLevel < towerOfPower[towerOfPower.length-1].powerLevel) {
 				this.playCard(card);
 			} else {

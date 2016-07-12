@@ -16,7 +16,7 @@ var TowerOfPower = React.createClass({
 		return (
 			<div className="tower-of-power">
 				Tower Of Power <br/>
-				{towerOfPowerDeckDisplay}
+			{towerOfPowerDeckDisplay}
 			</div>
 		)
 	}

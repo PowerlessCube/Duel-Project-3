@@ -1,3 +1,5 @@
+const cardAbility = require('./cardAbilities.js');
+
 module.exports = [
 		//Player 1 - Cards
 		{
@@ -8,7 +10,8 @@ module.exports = [
 					cardImage: "image/redcards/killing-blow-red.png",
 					cardBackImage: "image/card-back.png",
 					cardTitle: "Killing Blow",
-					CardAbilityText: "Bury a face up card. Cannot play after trump."
+					cardAbilityText: "Bury a face up card. Cannot play after trump.",
+					cardAbility: "this.killingBlow"
 				},
 				{
 					powerLevel: 1,

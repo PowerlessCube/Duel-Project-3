@@ -27,10 +27,6 @@ var PlayerBox = React.createClass({
 				value="Change player"
 				onClick={this.nextPlayer}
 			/>
-			<input
-				type="button"
-				value="Temp Card Power Check"
-			/>
 			</div>
 		)
 	}
