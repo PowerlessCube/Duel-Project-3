@@ -8,7 +8,7 @@ var PlayerHand = React.createClass({
 		let playerHandClassNames = className('card', `player-${this.props.className}`);
 		var playerHandDisplay = this.props.playerHand.cards.map(function(card, index) {
 			return(
-				<div key={index} className={playerHandClassNames} onDoubleClick={ function(){ this.props.playCard(card)
+				<div key={index} className={playerHandClassNames} onDoubleClick={ function(){ this.props.playCardTowerOfPower(card)
 			}.bind(this) }>
 					<img src={card.cardImage} />
 				</div>

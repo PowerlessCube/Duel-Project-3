@@ -6,7 +6,6 @@ var classNames = require('classnames');
 var PlayerBox = require('./PlayerBox.jsx');
 var SharedGameStateBox = require('./SharedGameStateBox.jsx');
 var CardData = require('./models/cardData.js');
-var GameState = require('./models/gameState.js');
 var CardMovement = require('./models/cardMovement.js');
 // var GameState = new GameState();
 
@@ -34,25 +33,24 @@ var GameBox = React.createClass({
 	},
 
 	playCard: function(card) {
+		let playerToUpdate = this.currentPlayer();
+		playerToUpdate.cards = CardMovement.removeCard( playerToUpdate.cards, card )
+		let newPlayerCards = this.state.playerCards
+		newPlayerCards[this.state.currentPlayer] = playerToUpdate
+		var newTowerOfPower = this.state.towerOfPower.concat( [ card ] )
+		this.setState( { playerCards: newPlayerCards, towerOfPower: newTowerOfPower } )
+	},
+
+	playCardTowerOfPower: function(card) {
 		let towerOfPower = this.state.towerOfPower
 		if (towerOfPower.length == 0) {
 			console.log("adds first card to tower")
-			let playerToUpdate = this.currentPlayer();
-			playerToUpdate.cards = CardMovement.removeCard( playerToUpdate.cards, card )
-			let newPlayerCards = this.state.playerCards
-			newPlayerCards[this.state.currentPlayer] = playerToUpdate
-			var newTowerOfPower = this.state.towerOfPower.concat( [ card ] )
-			this.setState( { playerCards: newPlayerCards, towerOfPower: newTowerOfPower } )
+			this.playCard(card);
 		}
 		else {
 			console.log("adds second card or more to tower")
 			if (card.powerLevel < towerOfPower[towerOfPower.length-1].powerLevel) {
-				let playerToUpdate = this.currentPlayer();
-				playerToUpdate.cards = CardMovement.removeCard( playerToUpdate.cards, card )
-				let newPlayerCards = this.state.playerCards
-				newPlayerCards[this.state.currentPlayer] = playerToUpdate
-				var newTowerOfPower = this.state.towerOfPower.concat( [ card ] )
-				this.setState( { playerCards: newPlayerCards, towerOfPower: newTowerOfPower } )
+				this.playCard(card);
 			} else {
 				console.log("You can't play that card");
 			}
@@ -89,7 +87,7 @@ var GameBox = React.createClass({
 					className= {this.state.currentPlayer + 1}
 					cardData={currentPlayer}
 					changePlayer={this.changePlayer}
-					playCard={this.playCard}
+					playCardTowerOfPower={this.playCardTowerOfPower}
 					playerId={this.state.currentPlayer}
 				/>
 			</div>

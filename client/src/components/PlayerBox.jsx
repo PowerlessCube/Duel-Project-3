@@ -19,7 +19,7 @@ var PlayerBox = React.createClass({
 				<PlayerHand
 					className={this.props.playerId + 1}
 					playerHand={this.props.cardData}
-					playCard={this.props.playCard}
+					playCardTowerOfPower={this.props.playCardTowerOfPower}
 					changePlayer={this.props.changePlayer}
 				/>
 			<input
