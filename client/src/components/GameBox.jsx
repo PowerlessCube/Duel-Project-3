@@ -29,6 +29,10 @@ var GameBox = React.createClass({
 		}
 	},
 
+	cardPowerCheck: function() {
+		console.log("towerOfPowerPowerCheck");
+	},
+
 	currentPlayer: function() {
 		return this.state.playerCards[ this.state.currentPlayer ]
 	},
