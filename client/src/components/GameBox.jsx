@@ -44,22 +44,17 @@ var GameBox = React.createClass({
 
 	gameStartBuryCard: function() {
 		console.log("gameStartBuryCard Function:");
-		let mappedPlayers = this.state.playerCards.map(function(player) {
-			return player.cards = CardMovement.removeCard(player.cards, CardMovement.randomCard(player.cards))
+		let removedCards = []
+		this.state.playerCards.forEach(function(player) {
+			let randomCard = CardMovement.randomCard(player.cards)
+			removedCards.push( randomCard )
+			return player.cards = CardMovement.removeCard(player.cards, randomCard)
 		})
-		console.log("mappedPlayers: ", mappedPlayers);
-		console.log("playerCards State: ", this.state.playerCards);
+		// console.log("mappedPlayers: ", mappedPlayers);
+		console.log("removedCards", removedCards);
 		console.log("buryPile: ", this.state.buryPile);
-		this.setState({ playerCards: this.state.playerCards})
-
-		// this.setState({ playerCards: mappedPlayers});
-
-		// let player1Cards = this.state.playerCards[0].cards
-		// this.state.playerCards[0].cards = CardMovement.removeCard(player1Cards, CardMovement.randomCard(player1Cards))
-		//
-		// let player2Cards = this.state.playerCards[1].cards
-		// this.state.playerCards[0].cards = CardMovement.removeCard(player2Cards, CardMovement.randomCard(player2Cards))
-
+		let newBuryPile = this.state.buryPile.concat( removedCards )
+		this.setState({ playerCards: this.state.playerCards, buryPile: newBuryPile })
 	},
 
 	render: function() {
