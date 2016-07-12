@@ -50,6 +50,7 @@ var GameBox = React.createClass({
 		console.log("mappedPlayers: ", mappedPlayers);
 		console.log("playerCards State: ", this.state.playerCards);
 		console.log("buryPile: ", this.state.buryPile);
+		this.setState({ playerCards: this.state.playerCards})
 
 		// this.setState({ playerCards: mappedPlayers});
 
