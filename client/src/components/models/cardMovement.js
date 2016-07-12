@@ -9,9 +9,10 @@ module.exports = {
 		}
 	},
 
-	removeCard: function(deck, card) {
-		var index = deck.indexOf(card);
-		return deck.splice(index, 1)[0];
+	removeCard: function(deck, cardToRemove) {
+		return deck.filter(function(card){
+			return cardToRemove.powerLevel != card.powerLevel;
+		});
 	},
 
 	addCard: function(deck, card) {

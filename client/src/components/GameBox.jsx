@@ -9,27 +9,47 @@ var CardData = require('./models/cardData.js');
 var GameState = require('./models/gameState.js');
 var CardMovement = require('./models/cardMovement.js');
 var GameState = new GameState();
-var cardMovement = CardMovement
+// var cardMovement = CardMovement
 
 var GameBox = React.createClass({
 
 	getInitialState: function() {
 		return {
 			playerCards: CardData,
-			players: GameState.addPlayers(CardData),
-			currentPlayer: CardData[0],
+			// players: GameState.addPlayers(CardData),
+			// currentPlayer: CardData[0],
+			currentPlayer: 0,
 			towerOfPower: [],
 			buryPile: []
 		}
 	},
 
 	changePlayer: function(e) {
-		let nextPlayer = GameState.nextPlayer();
-		this.setState({currentPlayer: nextPlayer})
+		// let nextPlayer = GameState.nextPlayer();
+		// let newPlayer = this.state.currentPlayer + 1
+		if( this.state.currentPlayer === 0){
+			this.setState({currentPlayer: 1})
+		}else{
+			this.setState({currentPlayer: 0})
+		}
+
+	},
+
+	currentPlayer: function() {
+		return this.state.playerCards[ this.state.currentPlayer ]
+	},
+
+	playCard: function(card) {
+		let playerToUpdate = this.currentPlayer();
+		playerToUpdate.cards = CardMovement.removeCard( playerToUpdate.cards, card )
+		let newPlayerCards = this.state.playerCards
+		newPlayerCards[this.state.currentPlayer] = playerToUpdate
+		var newTowerOfPower = this.state.towerOfPower.concat( [ card ] )
+		this.setState( { playerCards: newPlayerCards, towerOfPower: newTowerOfPower } )
 	},
 
 	render: function() {
-
+		let currentPlayer = this.currentPlayer()
 		return (
 			<div className="game-box">
 				Game Box
@@ -38,9 +58,11 @@ var GameBox = React.createClass({
 					buryPile={this.state.buryPile}
 				/>
 				<PlayerBox
-					className={this.state.currentPlayer[0].player}
-					CardData={this.state.currentPlayer}
-					changePlayer={this.changePlayer}
+					className= { this.state.currentPlayer + 1 }
+						cardData={ currentPlayer }
+					changePlayer={ this.changePlayer }
+					playCard={ this.playCard }
+					playerId = { this.state.currentPlayer }
 				/>
 			</div>
 		)

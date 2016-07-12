@@ -8,7 +8,6 @@ var PlayerHand = require('./PlayerHand.jsx');
 var PlayerBox = React.createClass({
 	nextPlayer: function(e) {
 		this.props.changePlayer();
-		// TODO: Change visibility of playerbox so current player is visible and next player is hidden.
 	},
 
 	render: function() {
@@ -16,16 +15,15 @@ var PlayerBox = React.createClass({
 		return (
 			<div className={playerBoxClassNames}>
 				Player Box <br />
-			<h4>PLAYER {this.props.CardData[0].player}</h4>
-				<h4>CARDS: {this.props.CardData[0].cards.length}</h4>
+			<h4>PLAYER {this.props.playerId + 1}</h4>
+				<h4>CARDS: {this.props.cardData.cards.length}</h4>
 				<PlayerHand
-					playerHand={this.props.CardData[0]}
+					className={this.props.playerId + 1}
+					playerHand={this.props.cardData}
+					playCard={this.props.playCard}
+					changePlayer={this.props.changePlayer}
 				/>
-			<input
-				type="submit"
-				value="Change player"
-				onClick={this.nextPlayer}
-			/>
+			<input type="button" value="Change player" onClick={this.nextPlayer}/>
 			</div>
 		)
 	}

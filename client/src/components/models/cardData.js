@@ -1,8 +1,7 @@
 module.exports = [
-	//Player 1 - Cards
-	[
+		//Player 1 - Cards
 		{
-			player: 1,
+			// player: 1,
 			cards:
 			[
 				{
@@ -24,12 +23,11 @@ module.exports = [
 					CardAbilityText: "Put a face-up card into your hand."
 				}
 			]
-		}
-	],
-	//Player 2 - Cards
-	[
+		},
+
+		//Player 2 - Cards
 		{
-			player: 2,
+			// player: 2,
 			cards:
 			[
 				{
@@ -52,5 +50,4 @@ module.exports = [
 				}
 			]
 		}
-	],
-];
+	];
