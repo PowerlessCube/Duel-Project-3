@@ -24,7 +24,7 @@ var PlayerBox = React.createClass({
 				/>
 			<input
 				type="button"
-				value="Change player"
+				value="Temp Change player"
 				onClick={this.nextPlayer}
 			/>
 			</div>

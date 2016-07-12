@@ -5,18 +5,18 @@ var BuryPile = React.createClass({
 
 	render: function() {
 		let buryPileClassNames = className('card', 'bury-pile')
-		let BuryPileDeckDisplay = this.props.buryPile.map(function(card, index) {
+		let buryPileDeckDisplay = this.props.buryPile.map(function(card, index) {
 			return(
 				<div key={index} className={buryPileClassNames}>
-					<img src={card.cardImage} />
+					<img src={card.cardBackImage} />
 				</div>
 			)
-			console.log(BuryPileDeckDisplay);
+			console.log(buryPileDeckDisplay);
 		});
 		return (
 			<div className="bury-pile">
 				Bury Pile <br/>
-				{BuryPileDeckDisplay}
+			{buryPileDeckDisplay[buryPileDeckDisplay.length-1]}
 			</div>
 		)
 	}

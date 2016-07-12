@@ -82,7 +82,7 @@ var GameBox = React.createClass({
 	playCardTowerOfPower: function(card) {
 		let towerOfPower = this.state.towerOfPower
 		if (towerOfPower.length == 0 || card.powerLevel === 8 ) {
-			//Allows first card to be played to an empty towerOfPower
+			//Allows first card to be played to an empty towerOfPower or the Dodge
 			this.playCard(card);
 		}
 		else {
@@ -93,7 +93,6 @@ var GameBox = React.createClass({
 				console.log("You can't play that card");
 			}
 		}
-
 	},
 
 	gameStartBuryCard: function() {
