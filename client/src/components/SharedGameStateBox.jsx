@@ -8,7 +8,9 @@ var SharedGameStateBox = React.createClass({
 		return (
 			<div className="shared-game-state-box">
 				SharedGameStateBox Loaded
-				<TowerOfPower />
+				<TowerOfPower
+					towerOfPower={this.props.towerOfPower}
+				/>
 				<BuryPile />
 			</div>
 		)

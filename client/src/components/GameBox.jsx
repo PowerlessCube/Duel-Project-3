@@ -9,15 +9,12 @@ var CardData = require('./models/cardData.js');
 var GameState = require('./models/gameState.js');
 var CardMovement = require('./models/cardMovement.js');
 var GameState = new GameState();
-// var cardMovement = CardMovement
 
 var GameBox = React.createClass({
 
 	getInitialState: function() {
 		return {
 			playerCards: CardData,
-			// players: GameState.addPlayers(CardData),
-			// currentPlayer: CardData[0],
 			currentPlayer: 0,
 			towerOfPower: [],
 			buryPile: []

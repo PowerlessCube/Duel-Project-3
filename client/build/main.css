@@ -26,8 +26,13 @@ ul {
 	margin: 5vh;
 }
 
-.tower-of-power, .bury-pile {
+.tower-of-power {
 	border: cyan solid;
+	margin: 2vh;
+}
+
+.bury-pile {
+	border: orange solid;
 	margin: 2vh;
 }
 

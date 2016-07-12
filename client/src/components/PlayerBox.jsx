@@ -2,7 +2,6 @@
 var React = require('react');
 var className = require('classnames');
 
-
 var PlayerHand = require('./PlayerHand.jsx');
 
 var PlayerBox = React.createClass({
