@@ -22,8 +22,6 @@ var GameBox = React.createClass({
 	},
 
 	changePlayer: function(e) {
-		// let nextPlayer = GameState.nextPlayer();
-		// let newPlayer = this.state.currentPlayer + 1
 		if( this.state.currentPlayer === 0){
 			this.setState({currentPlayer: 1})
 		}else{
@@ -56,7 +54,7 @@ var GameBox = React.createClass({
 				/>
 				<PlayerBox
 					className= { this.state.currentPlayer + 1 }
-						cardData={ currentPlayer }
+					cardData={ currentPlayer }
 					changePlayer={ this.changePlayer }
 					playCard={ this.playCard }
 					playerId = { this.state.currentPlayer }
