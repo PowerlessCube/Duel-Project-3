@@ -27,7 +27,6 @@ var GameBox = React.createClass({
 		}else{
 			this.setState({currentPlayer: 0})
 		}
-
 	},
 
 	currentPlayer: function() {
@@ -43,21 +42,42 @@ var GameBox = React.createClass({
 		this.setState( { playerCards: newPlayerCards, towerOfPower: newTowerOfPower } )
 	},
 
+	gameStartBuryCard: function() {
+		console.log("gameStartBuryCard Function:");
+		let mappedPlayers = this.state.playerCards.map(function(player) {
+			return player.cards = CardMovement.removeCard(player.cards, CardMovement.randomCard(player.cards))
+		})
+		console.log("mappedPlayers: ", mappedPlayers);
+		console.log("playerCards State: ", this.state.playerCards);
+		console.log("buryPile: ", this.state.buryPile);
+
+		// this.setState({ playerCards: mappedPlayers});
+
+		// let player1Cards = this.state.playerCards[0].cards
+		// this.state.playerCards[0].cards = CardMovement.removeCard(player1Cards, CardMovement.randomCard(player1Cards))
+		//
+		// let player2Cards = this.state.playerCards[1].cards
+		// this.state.playerCards[0].cards = CardMovement.removeCard(player2Cards, CardMovement.randomCard(player2Cards))
+
+	},
+
 	render: function() {
 		let currentPlayer = this.currentPlayer()
+		// let buryCard = this.gameStartBuryCard()
 		return (
 			<div className="game-box">
 				Game Box
 				<SharedGameStateBox
 					towerOfPower={this.state.towerOfPower}
 					buryPile={this.state.buryPile}
+					gameStartBuryCard={this.gameStartBuryCard}
 				/>
 				<PlayerBox
-					className= { this.state.currentPlayer + 1 }
-					cardData={ currentPlayer }
-					changePlayer={ this.changePlayer }
-					playCard={ this.playCard }
-					playerId = { this.state.currentPlayer }
+					className= {this.state.currentPlayer + 1}
+					cardData={currentPlayer}
+					changePlayer={this.changePlayer}
+					playCard={this.playCard}
+					playerId={this.state.currentPlayer}
 				/>
 			</div>
 		)

@@ -1,7 +1,6 @@
 module.exports = [
 		//Player 1 - Cards
 		{
-			// player: 1,
 			cards:
 			[
 				{
@@ -27,7 +26,6 @@ module.exports = [
 
 		//Player 2 - Cards
 		{
-			// player: 2,
 			cards:
 			[
 				{

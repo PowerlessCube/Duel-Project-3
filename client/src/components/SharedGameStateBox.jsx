@@ -3,6 +3,9 @@ var TowerOfPower = require('./TowerOfPower.jsx');
 var BuryPile = require('./BuryPile.jsx');
 
 var SharedGameStateBox = React.createClass({
+	buryCard: function() {
+		this.props.gameStartBuryCard()
+	},
 
 	render: function() {
 		return (
@@ -14,6 +17,11 @@ var SharedGameStateBox = React.createClass({
 				<BuryPile
 					buryPile={this.props.buryPile}
 				/>
+			<input
+				type="button"
+				value="Temp Bury Card Button"
+				onClick={this.buryCard}
+			/>
 			</div>
 		)
 	}

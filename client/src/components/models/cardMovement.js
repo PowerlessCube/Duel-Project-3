@@ -15,15 +15,15 @@ module.exports = {
 		});
 	},
 
-	addCard: function(deck, card) {
-		deck.unshift(card);
-	},
-
-	moveCard: function(fromDeck, card, targetDeck) {
-		var targetCard = this.findCard(fromDeck, card);
-		this.removeCard(fromDeck, targetCard);
-		this.addCard(targetDeck, targetCard);
-	},
+	// addCard: function(deck, card) {
+	// 	deck.unshift(card);
+	// },
+	//
+	// moveCard: function(fromDeck, card, targetDeck) {
+	// 	var targetCard = this.findCard(fromDeck, card);
+	// 	this.removeCard(fromDeck, targetCard);
+	// 	this.addCard(targetDeck, targetCard);
+	// },
 
 	//Randomised Selection Function
 	randomCard: function(deck) {
