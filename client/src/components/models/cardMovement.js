@@ -1,13 +1,13 @@
 //MOVING CARDS FROM ARRAYS
 module.exports = {
 
-	findCard: function(deck, findCard) {
-		for (var card of deck) {
-			if (card === findCard) {
-				return card;
-			}
-		}
-	},
+	// findCard: function(deck, findCard) {
+	// 	for (var card of deck) {
+	// 		if (card === findCard) {
+	// 			return card;
+	// 		}
+	// 	}
+	// },
 
 	removeCard: function(deck, cardToRemove) {
 		return deck.filter(function(card){

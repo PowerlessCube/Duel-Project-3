@@ -15,6 +15,7 @@ var BuryPile = React.createClass({
 		});
 		return (
 			<div className="bury-pile">
+				Bury Pile <br/>
 				{BuryPileDeckDisplay}
 			</div>
 		)
