@@ -31,46 +31,80 @@ var GameBox = React.createClass({
 		return this.state.playerCards[ this.state.currentPlayer ]
 	},
 	//Card Abilities:
-	dodge: function() {
-		console.log("dodge function:");
-	},
 
-	backStab: function() {
-		console.log("backStab");
-	},
-
-	disarm: function() {
-		console.log("disarm function:");
-	},
-
-	changeStance: function() {
-		console.log("change stance function:");
-	},
-
-	copyCat: function() {
-		console.log("copycat function:");
-	},
-
-	feint: function() {
-		console.log("copycat function:");
-	},
-
-	precisionStrike: function() {
-		console.log("precision strike:");
+	killingBlow: function() {
+		console.log("killing blow");
 	},
 
 	hiddenStrength: function() {
 		console.log("hidden strength:");
 	},
 
-	killingBlow: function() {
-		console.log("killing blow");
+	precisionStrike: function() {
+		console.log("precision strike:");
+	},
+
+	feint: function() {
+		console.log("feint function:");
+	},
+
+	copyCat: function() {
+		console.log("copycat function:");
+	},
+
+	changeStance: function() {
+		console.log("change stance function:");
+	},
+
+	disarm: function() {
+		console.log("disarm function:");
+	},
+
+	backStab: function() {
+		console.log("backStab");
+	},
+
+	dodge: function() {
+		console.log("dodge function:");
+	},
+
+	cardAbilitySwitch: function(powerLevel) {
+		switch (powerLevel) {
+			case 0:
+				this.killingBlow()
+				break;
+			case 1:
+				this.hiddenStrength()
+				break;
+			case 2:
+				this.precisionStrike()
+				break;
+			case 3:
+				this.feint()
+				break;
+			case 4:
+				this.copyCat()
+				break;
+			case 5:
+				this.changeStance()
+				break;
+			case 6:
+				this.disarm()
+				break;
+			case 7:
+				this.backStab()
+				break;
+			case 8:
+				this.dodge()
+			break;
+			default:
+				console.log("nothing to do here.");
+		}
 	},
 
 	playCard: function(card) {
 		console.log("card: ", card);
-		// let cardAbility = JSON.parse(card.cardAbility);
-		// console.log("what is cardAbility: ", cardAbility);
+		this.cardAbilitySwitch(card.powerLevel)
 		let playerToUpdate = this.currentPlayer();
 		playerToUpdate.cards = CardMovement.removeCard( playerToUpdate.cards, card )
 		let newPlayerCards = this.state.playerCards
