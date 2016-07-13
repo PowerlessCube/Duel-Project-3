@@ -68,8 +68,8 @@ input:hover {
 }
 
 .bury-pile .card {
-	border: orange solid;
-	background-color: white;
+	border: red solid;
+	background-color: red;
 	border-radius: 10px;
 	margin-right: -35px;
 }
@@ -164,6 +164,7 @@ div .player-2-image {
 /*PLAYER CARDS*/
 .card {
 	border-radius: 10px;
+	background-color: #fff;
 	display: inline-block;
 	margin: 1vh;
 }

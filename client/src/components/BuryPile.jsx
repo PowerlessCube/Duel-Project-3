@@ -8,7 +8,7 @@ var BuryPile = React.createClass({
 		let buryPileDeckDisplay = this.props.buryPile.map(function(card, index) {
 			return(
 				<div key={index} className={buryPileClassNames}>
-					<img src={card.cardImage} />
+					<img src={card.cardBackImage} />
 				</div>
 			)
 			console.log(buryPileDeckDisplay);
