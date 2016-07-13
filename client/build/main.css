@@ -11,6 +11,23 @@ ul {
 	list-style: none;
 }
 
+input {
+	border-radius: 3px;
+  font-size: 14px;
+  background: #fff;
+  background-color: transparent;
+  padding: 6px 14px 6px 14px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3),inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 0 #FFF;
+  display: inline-block;
+  margin: 10px 5px 10px 2px;
+}
+
+input:hover {
+	border: 1px solid #77cc6d;
+  color: #77cc6d !important;
+}
+
 .game-box {
 	border: red solid;
 	border-radius: 10px;
@@ -29,16 +46,44 @@ ul {
 	border-radius: 10px;
 }
 
+.shared-game-state-box input {
+	border: 1px solid green;
+	color: green !important;
+}
+
+.shared-game-state-box input:hover {
+	border: 1px solid #77cc6d;
+  color: #77cc6d !important;
+}
+
 .tower-of-power {
 	border: cyan solid;
 	margin: 2vh;
 	border-radius: 10px;
+	display: inline-block;
+	width: 45%;
+}
+
+.tower-of-power .card {
+	border: cyan solid;
+	background-color: white;
+	border-radius: 10px;
+	margin-right: -35px;
 }
 
 .bury-pile {
 	border: orange solid;
 	margin: 2vh;
 	border-radius: 10px;
+	display: inline-block;
+	width: 45%;
+}
+
+.bury-pile .card {
+	border: orange solid;
+	background-color: white;
+	border-radius: 10px;
+	margin-right: -35px;
 }
 
 /*PLAYER BOX*/
@@ -53,6 +98,7 @@ ul {
 
 .player-2 {
 	border: #D47FFF solid;
+	color: #D47FFF;
 	border-radius: 10px;
 }
 
@@ -60,10 +106,41 @@ ul {
 	border-radius: 10px;
 }
 
-.player-box h4 {
+.player-1 h4 {
 	font-family: 'Shojumaru', cursive;
 	display: inline-block;
 	margin-left: 5vh;
+	color: #EF8B92;
+	border: none;
+}
+
+.player-2 h4 {
+	font-family: 'Shojumaru', cursive;
+	display: inline-block;
+	margin-left: 5vh;
+	color: #D47FFF;
+	border: none;
+}
+
+
+.player-1 input {
+	border: 1px solid #EF8B92;
+	color: #EF8B92 !important;
+}
+
+.player-2 input {
+	border: 1px solid #D47FFF;
+	color: #D47FFF !important;
+}
+
+.player-1 input:hover {
+	border: 1px solid #D47FFF;
+	color: #D47FFF !important;
+}
+
+.player-2 input:hover {
+	border: 1px solid #EF8B92;
+	color: #EF8B92 !important;
 }
 
 .player-hand {
@@ -80,7 +157,7 @@ ul {
 
 .card img {
 	border-radius: 10px;
-	width: 15vh;
+	width: 12vh;
 	height: auto;
 	max-width: 100%;
 }

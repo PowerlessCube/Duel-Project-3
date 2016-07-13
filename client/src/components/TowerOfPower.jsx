@@ -4,7 +4,7 @@ var className = require('classnames');
 var TowerOfPower = React.createClass({
 
 	render: function() {
-		let towerOfPowerClassNames = className('card', 'tower-of-power')
+		let towerOfPowerClassNames = className('card')
 		let towerOfPowerDeckDisplay = this.props.towerOfPower.map(function(card, index) {
 			return(
 				<div key={index} className={towerOfPowerClassNames}>

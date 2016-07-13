@@ -4,7 +4,7 @@ var className = require('classnames');
 var BuryPile = React.createClass({
 
 	render: function() {
-		let buryPileClassNames = className('card', 'bury-pile')
+		let buryPileClassNames = className('card')
 		let buryPileDeckDisplay = this.props.buryPile.map(function(card, index) {
 			return(
 				<div key={index} className={buryPileClassNames}>

@@ -10,13 +10,14 @@ var SharedGameStateBox = React.createClass({
 	render: function() {
 		return (
 			<div className="shared-game-state-box">
-				SharedGameStateBox Loaded
+				SharedGameStateBox Loaded <br/>
 				<TowerOfPower
 					towerOfPower={this.props.towerOfPower}
 				/>
 				<BuryPile
 					buryPile={this.props.buryPile}
 				/>
+			<br/>
 			<input
 				type="button"
 				value="Temp Bury Card Button"
