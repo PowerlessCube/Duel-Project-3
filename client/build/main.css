@@ -29,22 +29,8 @@ input:hover {
   color: #77cc6d !important;
 }
 
-.game-box {
-	border: red solid;
-	border-radius: 10px;
-}
-
-/*GAME BOX*/
-.game-box {
-	margin: 2vh;
-	border-radius: 10px;
-}
-
 /*SHARED GAME STATE BOX*/
 .shared-game-state-box {
-	border: green solid;
-	margin: 5vh;
-	border-radius: 10px;
 	text-align: center;
 }
 
@@ -59,7 +45,6 @@ input:hover {
 }
 
 .tower-of-power {
-	border: cyan solid;
 	margin: 2vh;
 	padding-right: 5vh;
 	border-radius: 10px;
@@ -75,7 +60,6 @@ input:hover {
 }
 
 .bury-pile {
-	border: orange solid;
 	margin: 2vh;
 	padding-right: 5vh;
 	border-radius: 10px;

@@ -156,7 +156,6 @@ var GameBox = React.createClass({
 		let currentPlayer = this.currentPlayer()
 		return (
 			<div className="game-box">
-				Game Box
 				<SharedGameStateBox
 					towerOfPower={this.state.towerOfPower}
 					buryPile={this.state.buryPile}

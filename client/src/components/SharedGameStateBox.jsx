@@ -10,7 +10,6 @@ var SharedGameStateBox = React.createClass({
 	render: function() {
 		return (
 			<div className="shared-game-state-box">
-				SharedGameStateBox Loaded <br/>
 				<div className="player-image">
 					<img src="image/player-1-image.png" className="player-1-image"/>
 				</div>

@@ -14,7 +14,6 @@ var PlayerBox = React.createClass({
 		let playerBoxClassNames = className('player-box', `player-${this.props.className}`);
 		return (
 			<div className={playerBoxClassNames}>
-				Player Box <br />
 				<h4 className={playerBoxClassNames}>PLAYER {this.props.playerId + 1}</h4>
 				<h4>CARDS: {this.props.cardData.cards.length}</h4><br/>
 				<PlayerHand

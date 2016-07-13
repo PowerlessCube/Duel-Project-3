@@ -18,7 +18,6 @@ var PlayerHand = React.createClass({
 		}.bind(this))
 		return (
 			<div className={playerHand}>
-				Player Hand <br/>
 				{playerHandDisplay}
 			</div>
 		)
