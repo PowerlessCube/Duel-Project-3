@@ -156,7 +156,7 @@ div .player-2-image {
 }
 
 .player-2 input {
-	display: block;
+	display: inline-block;
 	border: 1px solid #D47FFF;
 	color: #D47FFF !important;
 }
