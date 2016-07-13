@@ -5,7 +5,7 @@ var className = require('classnames');
 var PlayerHand = React.createClass({
 
 	render: function() {
-		let playerHand = className("player-hand", `player-${this.props.className}`);
+		let playerHand = className("player-hand");
 		let playerHandClassNames = className('card', `player-${this.props.className}`);
 		var playerHandDisplay = this.props.playerHand.cards.map(function(card, index) {
 			return(
