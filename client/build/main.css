@@ -4,6 +4,7 @@
 
 body {
 	font-family: 'Open Sans Condensed', sans-serif;
+	background-image: url("https://s32.postimg.org/a4xdla2ph/0_Japanese_fade_background.png");
 }
 
 /*MAIN ELEMENTS*/
@@ -44,6 +45,7 @@ input:hover {
 	border: green solid;
 	margin: 5vh;
 	border-radius: 10px;
+	text-align: center;
 }
 
 .shared-game-state-box input {
@@ -59,9 +61,10 @@ input:hover {
 .tower-of-power {
 	border: cyan solid;
 	margin: 2vh;
+	padding-right: 5vh;
 	border-radius: 10px;
 	display: inline-block;
-	width: 45%;
+	width: 25%;
 }
 
 .tower-of-power .card {
@@ -74,9 +77,10 @@ input:hover {
 .bury-pile {
 	border: orange solid;
 	margin: 2vh;
+	padding-right: 5vh;
 	border-radius: 10px;
 	display: inline-block;
-	width: 45%;
+	width: 25%;
 }
 
 .bury-pile .card {
@@ -89,6 +93,26 @@ input:hover {
 /*PLAYER BOX*/
 .player-box {
 	margin: 5vh;
+	text-align: center;
+}
+
+.player-image {
+	display: inline-block;
+	width: 16%;
+	margin-left: 2vh;
+	margin-right: 2vh;
+}
+
+div .player-1-image {
+	display: inline-block;
+	width: 25vh;
+	height: auto;
+}
+
+div .player-2-image {
+	display: inline-block;
+	width: 25vh;
+	height: auto;
 }
 
 .player-1 {
@@ -103,7 +127,9 @@ input:hover {
 }
 
 .player-hand {
+	display: inline-block;
 	border-radius: 10px;
+	text-align: center;
 }
 
 .player-1 h4 {
@@ -124,11 +150,13 @@ input:hover {
 
 
 .player-1 input {
+	display: inline-block;
 	border: 1px solid #EF8B92;
 	color: #EF8B92 !important;
 }
 
 .player-2 input {
+	display: block;
 	border: 1px solid #D47FFF;
 	color: #D47FFF !important;
 }
@@ -146,6 +174,7 @@ input:hover {
 .player-hand {
 	margin: 2vh;
 	border-radius: 10px;
+	text-align: center;
 }
 
 /*PLAYER CARDS*/

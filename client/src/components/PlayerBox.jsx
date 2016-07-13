@@ -15,19 +15,20 @@ var PlayerBox = React.createClass({
 		return (
 			<div className={playerBoxClassNames}>
 				Player Box <br />
-			<h4 className={playerBoxClassNames}>PLAYER {this.props.playerId + 1}</h4>
-				<h4>CARDS: {this.props.cardData.cards.length}</h4>
+				<h4 className={playerBoxClassNames}>PLAYER {this.props.playerId + 1}</h4>
+				<h4>CARDS: {this.props.cardData.cards.length}</h4><br/>
 				<PlayerHand
 					className={this.props.playerId + 1}
 					playerHand={this.props.cardData}
 					playCardTowerOfPower={this.props.playCardTowerOfPower}
 					changePlayer={this.props.changePlayer}
 				/>
-			<input
-				type="button"
-				value="Temp Change player"
-				onClick={this.nextPlayer}
-			/>
+				<br/>
+				<input
+					type="button"
+					value="Temp Change player"
+					onClick={this.nextPlayer}
+				/>
 			</div>
 		)
 	}

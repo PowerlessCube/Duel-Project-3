@@ -11,18 +11,24 @@ var SharedGameStateBox = React.createClass({
 		return (
 			<div className="shared-game-state-box">
 				SharedGameStateBox Loaded <br/>
+				<div className="player-image">
+					<img src="image/player-1-image.png" className="player-1-image"/>
+				</div>
 				<TowerOfPower
 					towerOfPower={this.props.towerOfPower}
 				/>
 				<BuryPile
 					buryPile={this.props.buryPile}
 				/>
-			<br/>
-			<input
-				type="button"
-				value="Temp Bury Card Button"
-				onClick={this.buryCard}
-			/>
+				<div className="player-image">
+					<img src="image/player-2-image.png" className="player-2-image"/>
+				</div>
+				<br/>
+				<input
+					type="button"
+					value="Temp Bury Card Button"
+					onClick={this.buryCard}
+				/>
 			</div>
 		)
 	}
