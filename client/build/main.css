@@ -13,27 +13,32 @@ ul {
 
 .game-box {
 	border: red solid;
+	border-radius: 10px;
 }
 
 /*GAME BOX*/
 .game-box {
 	margin: 2vh;
+	border-radius: 10px;
 }
 
 /*SHARED GAME STATE BOX*/
 .shared-game-state-box {
 	border: green solid;
 	margin: 5vh;
+	border-radius: 10px;
 }
 
 .tower-of-power {
 	border: cyan solid;
 	margin: 2vh;
+	border-radius: 10px;
 }
 
 .bury-pile {
 	border: orange solid;
 	margin: 2vh;
+	border-radius: 10px;
 }
 
 /*PLAYER BOX*/
@@ -43,14 +48,16 @@ ul {
 
 .player-1 {
 	border: #EF8B92 solid;
+	border-radius: 10px;
 }
 
 .player-2 {
 	border: #D47FFF solid;
+	border-radius: 10px;
 }
 
 .player-hand {
-	border: purple solid;
+	border-radius: 10px;
 }
 
 .player-box h4 {
@@ -61,6 +68,7 @@ ul {
 
 .player-hand {
 	margin: 2vh;
+	border-radius: 10px;
 }
 
 /*PLAYER CARDS*/
@@ -74,4 +82,15 @@ ul {
 	border-radius: 10px;
 	width: 15vh;
 	height: auto;
+	max-width: 100%;
+}
+
+.card:hover {
+	display: inline-block;
+	backface-visibility: hidden;
+	transition-duration: 0.3s;
+	transition-property: transform;
+	transition-timing-function: ease-out;
+	transform: translateY(-15px);
+	cursor: pointer;
 }

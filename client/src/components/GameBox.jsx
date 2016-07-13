@@ -145,7 +145,6 @@ var GameBox = React.createClass({
 
 	render: function() {
 		let currentPlayer = this.currentPlayer()
-		// let buryCard = this.gameStartBuryCard()
 		return (
 			<div className="game-box">
 				Game Box
