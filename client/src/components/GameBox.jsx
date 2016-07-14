@@ -69,15 +69,6 @@ var GameBox = React.createClass({
 	},
 
 	cardAbilitySwitch: function(powerLevel) {
-	// 	var powerLevelToAbility = {
-	// 		0: this.killingBlow,
-	// 		1: this.hiddenStength,
-	// 		2: this.precisionStrike,
-	// 		3:
-	// 	}
-	//
-	// 	powerLevelAbility[powerLevel]()
-
 		switch (powerLevel) {
 			case 0:
 				this.killingBlow()
