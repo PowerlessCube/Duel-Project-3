@@ -15,13 +15,12 @@ var BuryPile = React.createClass({
 		});
 		return (
 			<div className="bury-pile">
-				Bury Pile <br/>
+			Bury Pile <br/>
 			{buryPileDeckDisplay}
 			</div>
 		)
 	}
 
 })
-
 
 module.exports = BuryPile;
